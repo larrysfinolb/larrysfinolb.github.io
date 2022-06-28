@@ -3,6 +3,7 @@
 	--primary-color: #fed11f;
 	--background-color: #313552;
 	--white: #ffffff;
+	--black: #000000;
 	--grey: #f9f9f9;
 	--dark-grey: #979797;
 
@@ -23,13 +24,56 @@ html {
 	font-family: 'Raleway', sans-serif;
 }
 input,
-textarea {
+textarea,
+button {
 	border: none;
 	outline: none;
 	font-family: inherit;
+	background-color: transparent;
 }
 ul {
 	list-style: none;
+}
+a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+/* HEADER */
+.header {
+	position: relative;
+	padding: 2rem 2rem 0 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--background-color);
+}
+.header__title {
+	font-size: var(--large-font);
+	color: var(--white);
+}
+.header__nav {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 100%;
+	transform-origin: top;
+	transform: scaleY(0);
+	transition: transform 0.35s;
+}
+.header__nav--active {
+	transform: scale(100%);
+}
+.header__nav ul li {
+	width: 100%;
+	padding: 1.2rem;
+	font-size: var(--small-font);
+	font-weight: bold;
+	border-bottom: 1px solid var(--dark-grey);
+	background-color: var(--white);
+}
+.header__nav ul li a {
+	color: var(--black);
 }
 
 /* SECTION */
@@ -159,6 +203,9 @@ ul {
 }
 .icon--linkedin {
 	background-image: url('./../assets/icons/linkedin-icon.svg');
+}
+.icon--menu {
+	background-image: url('./../assets/icons/menu-icon.svg');
 }
 .icon--twitter {
 	background-image: url('./../assets/icons/twitter-icon.svg');

@@ -11,8 +11,17 @@
 		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet" />
 	</head>
 	<body>
-		<header>
-			<h1>Larry Finol</h1>
+		<header class="header">
+			<h1 class="header__title">Larry Finol</h1>
+			<button class="header__button" id="menu_btn"><span class="icon icon--menu"></span></button>
+			<nav class="header__nav" id="nav">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about_me">About Me</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#contact_me">Contact Me</a></li>
+				</ul>
+			</nav>
 		</header>
 		<main>
 			<section class="section section--purple">
@@ -91,5 +100,6 @@
 				</ul>
 			</section>
 		</footer>
+		<script src="./main.js"></script>
 	</body>
 </html>
